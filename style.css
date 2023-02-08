@@ -1,120 +1,62 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  :root {
-    --text: 1.5rem;
-    --head: calc(1rem + 5vw);
-    --bg-color: #f6b93b;
-  }
-  
-  body {
-    font-family: "Poppins", sans-serif;
-  }
-  
-  .hero-section {
-    min-height: 100vh;
-    background: url(bgimg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    z-index: 2;
-    animation: slide 1s ease-in-out;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10vh;
-    padding: 0rem 1.5rem;
-    color: white;
-    transform: translateY(-100%);
-    animation: movedown 850ms ease-in 1s forwards;
-  }
-  
-  @keyframes movedown {
-    from {
-      transform: translateY(-100%);
-    }
-    to {
-      transform: translateY(0%);
-    }
-  }
-  
-  .navbar ul {
-    list-style: none;
-  }
-  
-  .navbar ul li {
-    display: inline-block;
-    margin-left: 3rem;
-    font-size: 18px;
-  }
-  
-  .navbar ul li a {
-    text-decoration: none;
-    color: white;
-    border-bottom: 2px solid transparent;
-  }
-  
-  .navbar ul li a:hover {
-    border-bottom: 2px solid var(--bg-color);
-  }
-  
-  .hero-text {
-    color: white;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  @keyframes slide {
-    from {
-      transform: translateX(-100%);
-    }
-    to {
-      transform: translateX(0%);
-    }
-  }
-  
-  .hero-text::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: black;
-    z-index: -1;
-    top: 0;
-    opacity: 0.6;
-  }
-  
-  .hero-text a {
-    color: white;
-    background: var(--bg-color);
-    font-weight: 700;
-    font-size: var(--text);
-    padding: 0.4rem 1rem;
-    margin: 0.8rem auto;
-    display: block;
-    text-decoration: none;
-    transition: opacity 250ms linear;
-  }
-  
-  .hero-text a:hover {
-    opacity: 0.8;
-  }
-  
-  .hero-text h2 {
-    font-size: 60px;
-  }
-  
-  .hero-text p {
-    font-size: 30px;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Mulish", sans-serif;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background-color: #a28089;
+            display: grid;
+            place-items: center;
+        }
+
+        form {
+            background-color: #fcbbc6;
+            padding: 80px;
+            width: 110%;
+            margin: 100px auto;
+            text-align: center;
+            -webkit-box-shadow: 0 10px 6px -6px #777;
+            -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+        }
+
+        #tempCalc label {
+            font-size: 30px;
+        }
+
+        #temp {
+            border: none;
+            padding: 10px;
+            height: 40px;
+            width: 100px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        #temp_diff {
+            height: 40px;
+            border: none;
+            margin-top: 20px;
+            font-size: 15px;
+            vertical-align: top;
+        }
+
+        [type="submit"] {
+            height: 35px;
+            margin: 20px;
+            width: 100px;
+            font-size: 15px;
+            border: none;
+            background-color: black;
+            color: white;
+        }
+
+        #resultContainer {
+            font-size: 35px;
+        }
